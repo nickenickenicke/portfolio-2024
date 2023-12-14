@@ -17,6 +17,10 @@
   grid-row: span 1;
 }
 
+.gr--2 {
+  grid-row: span 2;
+}
+
 /* GRID COLUMNS */
 
 .gc--full {
@@ -37,6 +41,18 @@
 
 /* GRID COLUMNS TABLET+ */
 
+.gc__tablet--full {
+  @include m.for-size(tablet) {
+    grid-column: content-start / content-end;
+  }
+}
+
+.gc__tablet--start2 {
+  @include m.for-size(tablet) {
+    grid-column: content-start / content-2;
+  }
+}
+
 .gc__tablet--start3 {
   @include m.for-size(tablet) {
     grid-column: content-start / content-3;
@@ -49,8 +65,32 @@
   }
 }
 
+.gc__tablet--15 {
+  @include m.for-size(tablet) {
+    grid-column: content-1 / content-5;
+  }
+}
+
 .gc__tablet--3end {
   @include m.for-size(tablet) {
     grid-column: content-3 / content-end;
+  }
+}
+
+.gc__desktop--start3 {
+  @include m.for-size(desktop) {
+    grid-column: content-start / content-3;
+  }
+}
+
+.gc__desktop--3end {
+  @include m.for-size(desktop) {
+    grid-column: content-3 / content-end;
+  }
+}
+
+.gc__desktop--4end {
+  @include m.for-size(desktop) {
+    grid-column: content-4 / content-end;
   }
 }

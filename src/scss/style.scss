@@ -52,13 +52,17 @@ main {
 }
 
 .header {
-  font-size: 6rem;
+  font-size: v.$font-xxl;
   text-transform: uppercase;
   font-family: v.$font-sans;
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0.1rem;
   word-wrap: break-word;
+  &--m {
+    font-size: v.$font-xl;
+    font-weight: 700;
+  }
 }
 
 .border {
@@ -78,7 +82,7 @@ main {
 
   &--top {
     width: 100%;
-    padding: v.$margin-xs;
+    padding: v.$margin-xs v.$margin-m;
     &__dark {
       background-color: v.$col-black;
       color: v.$col-bg;
@@ -87,17 +91,63 @@ main {
 
   &--bottom {
     width: 100%;
-    padding: v.$margin-xs;
+    padding: v.$margin-xs v.$margin-m;
   }
 
   &--header {
-    font-size: v.$font-l;
+    font-size: v.$font-xl;
     font-family: v.$font-sans;
   }
 }
 
+.btn {
+  border-radius: 999em;
+  border: v.$border-m;
+  padding: v.$margin-s v.$margin-l;
+
+  color: v.$col-bg;
+  background-color: v.$col-black;
+
+  font-family: v.$font-sans;
+  font-size: v.$font-l;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  &:hover {
+    color: v.$col-black;
+    background-color: v.$col-bg;
+  }
+
+  &--inverted {
+    color: v.$col-black;
+    background-color: v.$col-bg;
+    &:hover {
+      color: v.$col-bg;
+      background-color: v.$col-black;
+    }
+  }
+}
+
+.w100p {
+  width: 100%;
+}
+
+.mb {
+  margin-bottom: v.$margin-m;
+}
+
 .bodytext {
   font-family: v.$font-sans;
+  font-size: v.$font-m;
   line-height: 1.4;
-  font-size: 1.2rem;
+}
+
+img {
+  width: 100%;
+}
+
+.image--bw {
+  filter: grayscale(100%);
+  mix-blend-mode: multiply;
 }
