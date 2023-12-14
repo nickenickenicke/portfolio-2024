@@ -1,11 +1,56 @@
 @use "./variables" as v;
+@use "./mixins" as m;
 
-main {
+.maingrid {
   display: grid;
   grid-template-columns:
-    [gutter-l-start] v.$frame-size [content-start] 1fr
+    [gutter-l-start] v.$frame-size [gutter-l-end content-start] 1fr
     [content-1] 1fr [content-2] 1fr [content-3] 1fr [content-4] 1fr
     [content-5] 1fr [content-end gutter-r-start] v.$frame-size [gutter-r-end];
   grid-template-rows: repeat(1, auto);
   gap: v.$margin-m;
+}
+
+/* GRID ROWS */
+
+.gr--1 {
+  grid-row: span 1;
+}
+
+/* GRID COLUMNS */
+
+.gc--full {
+  grid-column: content-start / content-end;
+}
+
+.gc--start3 {
+  grid-column: content-start / content-3;
+}
+
+.gc--start4 {
+  grid-column: content-start / content-4;
+}
+
+.gc--4end {
+  grid-column: content-4 / content-end;
+}
+
+/* GRID COLUMNS TABLET+ */
+
+.gc__tablet--start3 {
+  @include m.for-size(tablet) {
+    grid-column: content-start / content-3;
+  }
+}
+
+.gc__tablet--start4 {
+  @include m.for-size(tablet) {
+    grid-column: content-start / content-4;
+  }
+}
+
+.gc__tablet--3end {
+  @include m.for-size(tablet) {
+    grid-column: content-3 / content-end;
+  }
 }
