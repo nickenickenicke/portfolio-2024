@@ -13,6 +13,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background-color: v.$col-black;
+  color: v.$col-bg;
+}
+
 main {
   background-color: v.$col-bg;
   padding: v.$frame-size 0 calc(v.$frame-size * 2);
@@ -90,6 +95,10 @@ main {
     &__dark {
       background-color: v.$col-black;
       color: v.$col-bg;
+      &::selection {
+        color: v.$col-black;
+        background-color: v.$col-bg;
+      }
     }
   }
 
