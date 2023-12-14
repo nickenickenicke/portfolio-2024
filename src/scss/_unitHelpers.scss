@@ -1,0 +1,47 @@
+@use "./variables" as v;
+
+/* WIDTHS AND HEIGHTS */
+
+.w100p {
+  width: 100%;
+}
+
+.h100px {
+  height: 100px;
+}
+
+/* MARGINS  */
+
+.mb {
+  margin-bottom: v.$margin-m;
+}
+
+.mt {
+  margin-top: v.$margin-m;
+}
+
+/* ROTATIONS */
+
+.rm30deg {
+  transform: rotate(-30deg);
+}
+
+.rm20deg {
+  transform: rotate(-20deg);
+}
+
+.rm10deg {
+  transform: rotate(-10deg);
+}
+
+.r10deg {
+  transform: rotate(10deg);
+}
+
+.r20deg {
+  transform: rotate(20deg);
+}
+
+.r30deg {
+  transform: rotate(30deg);
+}

@@ -1,0 +1,52 @@
+@use "./variables" as v;
+
+.star {
+  display: inline-block;
+  aspect-ratio: 1/1;
+  color: rgba(0, 0, 0, 0);
+  background: url("./img/star_n.svg") no-repeat center;
+
+  &--l1 {
+    background: url("./img/star_l1.svg") no-repeat center;
+  }
+  &--l2 {
+    background: url("./img/star_l2.svg") no-repeat center;
+  }
+  &--l3 {
+    background: url("./img/star_l3.svg") no-repeat center;
+  }
+  &--l4 {
+    background: url("./img/star_l4.svg") no-repeat center;
+  }
+  &--r1 {
+    background: url("./img/star_r1.svg") no-repeat center;
+  }
+  &--r2 {
+    background: url("./img/star_r2.svg") no-repeat center;
+  }
+  &--r3 {
+    background: url("./img/star_r3.svg") no-repeat center;
+  }
+  &--r4 {
+    background: url("./img/star_r4.svg") no-repeat center;
+  }
+}
+
+.oval {
+  display: inline-block;
+  margin: v.$margin-xs;
+  padding: v.$margin-m;
+
+  border-radius: 50%;
+  border: v.$border-s;
+  width: fit-content;
+  height: fit-content;
+  aspect-ratio: 4/1;
+
+  font-family: v.$font-mono;
+  text-align: center;
+  text-transform: uppercase;
+  &--thick {
+    border: v.$border-m;
+  }
+}

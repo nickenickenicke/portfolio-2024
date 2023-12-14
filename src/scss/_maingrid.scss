@@ -77,6 +77,12 @@
   }
 }
 
+.gc__tablet--4end {
+  @include m.for-size(tablet) {
+    grid-column: content-4 / content-end;
+  }
+}
+
 .gc__desktop--start3 {
   @include m.for-size(desktop) {
     grid-column: content-start / content-3;

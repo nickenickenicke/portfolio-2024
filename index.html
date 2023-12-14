@@ -7,22 +7,22 @@
   </head>
   <body>
     <div id="frame">
-      <div class="frame frame--top">Yourself</div>
-      <div class="frame frame--left">Allow</div>
+      <div class="frame frame--top">En nykläckt</div>
+      <div class="frame frame--left">Unna dig</div>
       <div class="frame--inner"></div>
-      <div class="frame frame--right">A Fresh</div>
-      <div class="frame frame--bottom">Developer</div>
+      <div class="frame frame--right">Formbar</div>
+      <div class="frame frame--bottom">Frontendare</div>
     </div>
     <main class="maingrid">
-      <header class="intro intro__text gc--full gc__tablet--start4 gr--1">
+      <header class="intro header gc--full gc__tablet--start4 gr--1">
         <span>
-          Hej!<br />Nicke här<br />Är<span class="intro__star intro__star--r4"
+          Hej!<br />Nicke här<br />Är<span class="star intro__star star--r4"
             >*</span
-          >jag<span class="intro__star intro__star--l4">*</span>din nya
+          >jag<span class="star intro__star star--l4">*</span>din nya
           praktikant?
         </span>
       </header>
-      <div class="fyrkant gc--4end gr--1"></div>
+      <div class="fyrkant gc--full gc__tablet--4end gr--1"></div>
       <h2 class="header gc--full gr--1">Components</h2>
       <h3 class="header header--m gc--full gr--1">Textboxes</h3>
       <div class="box box--border gc--full gc__tablet--start3 gr--1">
@@ -82,7 +82,7 @@
         <button class="btn btn--inverted w100p mb">Inverted button</button>
         <h2 class="header">H2 with class header</h2>
         <h3 class="header header--m mb">H3 with class header--m</h3>
-        <h4 class="box--header mb">H4 with class box--header</h4>
+        <h4 class="header--s mb">H4 with class header--s or box--header</h4>
         <p class="bodytext">Paragraph with bodytext.</p>
       </div>
       <img
@@ -90,6 +90,36 @@
         alt="FACE"
         class="gc--full gc__tablet--15 gc__desktop--4end gr--1 image image--bw"
       />
+      <div class="gc--full gr--1">
+        <h3 class="header header--m mb">
+          Stars from l4 to l1 to n to r1 to r4
+        </h3>
+        <span class="star star--l4 h100px">*</span>
+        <span class="star star--l3 h100px">*</span>
+        <span class="star star--l2 h100px">*</span>
+        <span class="star star--l1 h100px">*</span>
+        <span class="star star--n h100px">*</span>
+        <span class="star star--r1 h100px">*</span>
+        <span class="star star--r2 h100px">*</span>
+        <span class="star star--r3 h100px">*</span>
+        <span class="star star--r4 h100px">*</span>
+        <h3 class="header header--m mb mt">Ovals</h3>
+        <div class="oval">This is a nice little oval</div>
+        <div class="oval">
+          This is another nice little oval<br />but with two lines of texts
+        </div>
+        <div class="oval">Short</div>
+        <div class="oval oval--thick">This is a thick one</div>
+        <div class="oval oval--thick">
+          Double check all ovals<br />for responsitivity
+        </div>
+        <div class="oval rm30deg">Rotated -30</div>
+        <div class="oval rm20deg">Rotated -20</div>
+        <div class="oval rm10deg">Rotated -10</div>
+        <div class="oval r10deg">Rotated 10</div>
+        <div class="oval r20deg">Rotated 20</div>
+        <div class="oval r30deg">Rotated 30</div>
+      </div>
     </main>
     <script type="module" src="/src/ts/main.ts"></script>
   </body>

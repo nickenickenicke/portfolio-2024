@@ -2,6 +2,8 @@
 @use "./mixins" as m;
 @use "./frame";
 @use "./maingrid";
+@use "./graphics";
+@use "./unitHelpers";
 
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400..800&family=Space+Grotesk:wght@300..700&family=Space+Mono&display=swap");
 
@@ -22,33 +24,18 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  &__text {
-    @extend .header;
-  }
   &__star {
-    display: inline-block;
     height: 110px;
-    aspect-ratio: 1/1;
-    color: rgba(0, 0, 0, 0);
     vertical-align: bottom;
-    &--l3 {
-      background: url("./img/star_l3.svg") no-repeat center;
-    }
-    &--l4 {
-      background: url("./img/star_l4.svg") no-repeat center;
-    }
-    &--r3 {
-      background: url("./img/star_r3.svg") no-repeat center;
-    }
-    &--r4 {
-      background: url("./img/star_r4.svg") no-repeat center;
-    }
   }
 }
 
 .fyrkant {
   background: url("./img/star_n.svg") no-repeat center;
-  min-height: 30px;
+  aspect-ratio: 1/1;
+  @include m.for-size(tablet) {
+    aspect-ratio: unset;
+  }
 }
 
 .header {
@@ -63,6 +50,14 @@ main {
     font-size: v.$font-xl;
     font-weight: 700;
   }
+  &--s {
+    font-size: v.$font-xl;
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: 0;
+    line-height: unset;
+    font-family: v.$font-sans;
+  }
 }
 
 .border {
@@ -72,9 +67,6 @@ main {
 .box {
   display: flex;
   flex-direction: column;
-  &--border {
-    border: v.$border-m;
-  }
   &--rounded {
     border-radius: v.$margin-m;
     overflow: hidden;
@@ -82,7 +74,7 @@ main {
 
   &--top {
     width: 100%;
-    padding: v.$margin-xs v.$margin-m;
+    padding: v.$margin-xs 0 v.$margin-xs;
     &__dark {
       background-color: v.$col-black;
       color: v.$col-bg;
@@ -91,12 +83,21 @@ main {
 
   &--bottom {
     width: 100%;
-    padding: v.$margin-xs v.$margin-m;
+    padding: v.$margin-xs 0 v.$margin-m;
   }
 
   &--header {
-    font-size: v.$font-xl;
-    font-family: v.$font-sans;
+    @extend .header;
+    @extend .header--s;
+  }
+  &--border {
+    border: v.$border-m;
+    .box--bottom {
+      padding: v.$margin-xs v.$margin-m v.$margin-m;
+    }
+    .box--top {
+      padding: v.$margin-xs v.$margin-m;
+    }
   }
 }
 
@@ -127,14 +128,6 @@ main {
       background-color: v.$col-black;
     }
   }
-}
-
-.w100p {
-  width: 100%;
-}
-
-.mb {
-  margin-bottom: v.$margin-m;
 }
 
 .bodytext {
