@@ -1,0 +1,23 @@
+@use "./variables" as v;
+
+/* Mixin for media queries */
+
+@mixin for-size($size) {
+  @if ($size == tablet) {
+    @media (min-width: v.$break-tablet) {
+      @content;
+    }
+  }
+  @if ($size == desktop) {
+    @media (min-width: v.$break-desktop) {
+      @content;
+    }
+  }
+}
+/* USEAGE:
+    @include m.for-size(tablet) {
+      TABLET CHANGES
+    }
+    @include m.for-size(desktop) {
+      DESKTOP CHANGES
+    }            */

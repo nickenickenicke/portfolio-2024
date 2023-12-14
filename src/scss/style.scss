@@ -1,0 +1,72 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+@use "./frame";
+@use "./maingrid";
+
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400..800&family=Space+Grotesk:wght@300..700&family=Space+Mono&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background-color: v.$col-bg;
+  // height: 200vh;
+  padding: v.$frame-size 0;
+}
+
+.intro {
+  min-height: 100vh;
+  grid-column: content-start / content-end;
+  grid-row: span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include m.for-size(tablet) {
+    grid-column: content-start / content-4;
+  }
+  &__text {
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-family: v.$font-sans;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.1rem;
+    word-wrap: break-word;
+  }
+  &__star {
+    display: inline-block;
+    height: 110px;
+    aspect-ratio: 1/1;
+    color: rgba(0, 0, 0, 0);
+    vertical-align: bottom;
+    &--l3 {
+      background: url("./img/star_l3.svg") no-repeat center;
+    }
+    &--l4 {
+      background: url("./img/star_l4.svg") no-repeat center;
+    }
+    &--r3 {
+      background: url("./img/star_r3.svg") no-repeat center;
+    }
+    &--r4 {
+      background: url("./img/star_r4.svg") no-repeat center;
+    }
+  }
+}
+
+.fyrkant {
+  background: url("./img/star_n.svg") no-repeat center;
+  grid-column: content-5 / content-end;
+  grid-row: span 1;
+  min-height: 30px;
+}
+
+.long {
+  grid-column: content-start / content-end;
+  border: 1px solid white;
+  height: 4rem;
+  grid-row: span 1;
+}

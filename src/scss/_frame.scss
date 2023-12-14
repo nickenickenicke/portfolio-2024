@@ -1,0 +1,54 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+#frame {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: v.$frame-size 1fr v.$frame-size;
+  grid-template-rows: v.$frame-size 1fr v.$frame-size;
+  pointer-events: none;
+}
+
+.frame {
+  background-color: v.$col-frame;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: v.$font-mono;
+  font-size: 1rem;
+  text-transform: uppercase;
+
+  &--top {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+  }
+  &--left {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+  &--inner {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: none;
+    border: 1px solid black;
+  }
+  &--right {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    writing-mode: vertical-rl;
+  }
+  &--bottom {
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+  }
+}
