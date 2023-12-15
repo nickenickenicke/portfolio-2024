@@ -1,5 +1,17 @@
 @use "./variables" as v;
 
+/* POSITIONING */
+
+.relative {
+  position: relative;
+}
+
+/* BORDER */
+
+.border {
+  border: v.$border-m;
+}
+
 /* WIDTHS AND HEIGHTS */
 
 .w100p {
