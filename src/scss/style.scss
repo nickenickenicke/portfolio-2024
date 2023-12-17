@@ -192,3 +192,14 @@ img {
   left: -15%;
   width: 30%;
 }
+
+a {
+  color: v.$col-black;
+  text-decoration: underline 2px;
+  font-weight: 600;
+  position: relative;
+  &:hover {
+    color: v.$col-bg;
+    background-color: v.$col-black;
+  }
+}
