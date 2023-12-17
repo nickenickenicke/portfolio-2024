@@ -1,0 +1,30 @@
+@use "./variables" as v;
+
+.btn {
+  border-radius: 999em;
+  border: v.$border-m;
+  padding: v.$margin-s v.$margin-l;
+
+  color: v.$col-bg;
+  background-color: v.$col-black;
+
+  font-family: v.$font-sans;
+  font-size: v.$font-l;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  &:hover {
+    color: v.$col-black;
+    background-color: v.$col-bg;
+  }
+
+  &--inverted {
+    color: v.$col-black;
+    background-color: v.$col-bg;
+    &:hover {
+      color: v.$col-bg;
+      background-color: v.$col-black;
+    }
+  }
+}

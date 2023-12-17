@@ -39,7 +39,7 @@
   grid-column: content-4 / content-end;
 }
 
-/* GRID COLUMNS TABLET+ */
+/* GRID COLUMNS TABLET */
 
 .gc__tablet--full {
   @include m.for-size(tablet) {
@@ -82,6 +82,8 @@
     grid-column: content-4 / content-end;
   }
 }
+
+/* GRID COLUMNS DESKTOP */
 
 .gc__desktop--start3 {
   @include m.for-size(desktop) {

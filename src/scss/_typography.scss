@@ -1,0 +1,42 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+.bodytext {
+  font-family: v.$font-sans;
+  font-size: v.$font-m;
+  line-height: 1.4;
+}
+
+.header {
+  font-size: v.$font-xxl;
+  text-transform: uppercase;
+  font-family: v.$font-sans;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.1rem;
+  word-wrap: break-word;
+  @include m.for-size(tablet) {
+    font-size: v.$font-xxl-tablet;
+    @include m.for-size(desktop) {
+      font-size: v.$font-xxl-desktop;
+    }
+  }
+  &--m {
+    font-size: v.$font-xl;
+    font-weight: 700;
+  }
+  &--s {
+    font-size: v.$font-xl;
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: 0;
+    line-height: unset;
+    font-family: v.$font-sans;
+  }
+  &--outline {
+    @supports (-webkit-text-stroke: 1px black) {
+      -webkit-text-fill-color: v.$col-bg;
+      -webkit-text-stroke: 1px v.$col-black;
+    }
+  }
+}

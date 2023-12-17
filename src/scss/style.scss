@@ -5,6 +5,9 @@
 @use "./graphics";
 @use "./genericHelpers";
 @use "./animations";
+@use "./buttons";
+@use "./boxes";
+@use "./typography";
 
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400..800&family=Space+Grotesk:wght@300..700&family=Space+Mono&display=swap");
 
@@ -45,127 +48,6 @@ main {
   }
 }
 
-.fyrkant {
-  background: url("./img/star_n.svg") no-repeat center;
-  aspect-ratio: 1/1;
-  @include m.for-size(tablet) {
-    aspect-ratio: unset;
-  }
-}
-
-.header {
-  font-size: v.$font-xxl;
-  text-transform: uppercase;
-  font-family: v.$font-sans;
-  font-weight: 400;
-  line-height: 1.2;
-  letter-spacing: 0.1rem;
-  word-wrap: break-word;
-  @include m.for-size(tablet) {
-    font-size: v.$font-xxl-tablet;
-    @include m.for-size(desktop) {
-      font-size: v.$font-xxl-desktop;
-    }
-  }
-  &--m {
-    font-size: v.$font-xl;
-    font-weight: 700;
-  }
-  &--s {
-    font-size: v.$font-xl;
-    font-weight: 700;
-    text-transform: none;
-    letter-spacing: 0;
-    line-height: unset;
-    font-family: v.$font-sans;
-  }
-  &--outline {
-    @supports (-webkit-text-stroke: 1px black) {
-      -webkit-text-fill-color: v.$col-bg;
-      -webkit-text-stroke: 1px v.$col-black;
-    }
-  }
-}
-
-.box {
-  display: flex;
-  flex-direction: column;
-  &--rounded {
-    border-radius: v.$margin-m;
-    overflow: hidden;
-  }
-
-  &--top {
-    width: 100%;
-    padding: v.$margin-xs 0 v.$margin-xs;
-    &__dark {
-      background-color: v.$col-black;
-      color: v.$col-bg;
-      &::selection {
-        color: v.$col-black;
-        background-color: v.$col-bg;
-      }
-    }
-  }
-
-  &--bottom {
-    width: 100%;
-    padding: v.$margin-xs 0 v.$margin-m;
-  }
-
-  &--header {
-    @extend .header;
-    @extend .header--s;
-  }
-  &--border {
-    border: v.$border-m;
-    .box--bottom {
-      padding: v.$margin-xs v.$margin-m v.$margin-m;
-    }
-    .box--top {
-      padding: v.$margin-xs v.$margin-m;
-    }
-  }
-  &--alignright {
-    text-align: right;
-  }
-}
-
-.btn {
-  border-radius: 999em;
-  border: v.$border-m;
-  padding: v.$margin-s v.$margin-l;
-
-  color: v.$col-bg;
-  background-color: v.$col-black;
-
-  font-family: v.$font-sans;
-  font-size: v.$font-l;
-  font-weight: 700;
-
-  cursor: pointer;
-
-  &:hover {
-    color: v.$col-black;
-    background-color: v.$col-bg;
-  }
-
-  &--inverted {
-    color: v.$col-black;
-    background-color: v.$col-bg;
-    &:hover {
-      color: v.$col-bg;
-      background-color: v.$col-black;
-    }
-  }
-}
-
-.bodytext {
-  font-family: v.$font-sans;
-  font-size: v.$font-m;
-  line-height: 1.4;
-}
-
 img {
   width: 100%;
 }
@@ -173,17 +55,6 @@ img {
 .image--bw {
   filter: grayscale(100%);
   mix-blend-mode: multiply;
-}
-
-.flex {
-  display: flex;
-  &--center {
-    align-items: center;
-    justify-content: center;
-  }
-  &--column {
-    flex-direction: column;
-  }
 }
 
 .twistyface {

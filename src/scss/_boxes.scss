@@ -1,0 +1,43 @@
+@use "./variables" as v;
+@use "./typography";
+
+.box {
+  display: flex;
+  flex-direction: column;
+  &--rounded {
+    border-radius: v.$margin-m;
+    overflow: hidden;
+  }
+  &--top {
+    width: 100%;
+    padding: v.$margin-xs 0 v.$margin-xs;
+    &__dark {
+      background-color: v.$col-black;
+      color: v.$col-bg;
+      &::selection {
+        color: v.$col-black;
+        background-color: v.$col-bg;
+      }
+    }
+  }
+  &--bottom {
+    width: 100%;
+    padding: v.$margin-xs 0 v.$margin-m;
+  }
+  &--header {
+    @extend .header;
+    @extend .header--s;
+  }
+  &--border {
+    border: v.$border-m;
+    .box--bottom {
+      padding: v.$margin-xs v.$margin-m v.$margin-m;
+    }
+    .box--top {
+      padding: v.$margin-xs v.$margin-m;
+    }
+  }
+  &--alignright {
+    text-align: right;
+  }
+}
