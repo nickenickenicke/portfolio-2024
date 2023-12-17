@@ -14,17 +14,63 @@
 
   cursor: pointer;
 
+  position: relative;
+
+  &::after {
+    @supports (clip-path: polygon(62% 0%, 100% 0%, 100% 39%, 62% 39%)) {
+      content: "";
+      width: 100px;
+      height: 40px;
+      position: absolute;
+      top: 5px;
+      right: 7px;
+
+      border: 3px solid v.$col-bg;
+      clip-path: polygon(62% 0%, 100% 0%, 100% 39%, 62% 39%);
+
+      border-radius: 999em;
+    }
+  }
+
+  &::before {
+    @supports (clip-path: polygon(62% 0%, 100% 0%, 100% 39%, 62% 39%)) {
+      content: "";
+      width: 100px;
+      height: 40px;
+      position: absolute;
+      bottom: 5px;
+      left: 7px;
+
+      border: 3px solid v.$col-bg;
+      clip-path: polygon(0% 62%, 0% 100%, 39% 100%, 39% 62%);
+
+      border-radius: 999em;
+    }
+  }
+
   &:hover {
     color: v.$col-black;
     background-color: v.$col-bg;
+    &::after,
+    &::before {
+      border: 3px solid v.$col-black;
+    }
   }
 
   &--inverted {
     color: v.$col-black;
     background-color: v.$col-bg;
+    &::after,
+    &::before {
+      border: 3px solid v.$col-black;
+    }
     &:hover {
       color: v.$col-bg;
       background-color: v.$col-black;
+      &::after,
+      &::before {
+        border: 3px solid v.$col-bg;
+      }
     }
   }
 }
