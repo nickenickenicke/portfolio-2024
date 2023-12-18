@@ -30,6 +30,8 @@ main {
   padding: v.$frame-size 0 calc(v.$frame-size * 2);
 }
 
+/* INTRO SECTION */
+
 .intro {
   min-height: calc(100vh - (v.$frame-size * 2));
   display: flex;
@@ -46,15 +48,6 @@ main {
       }
     }
   }
-}
-
-img {
-  width: 100%;
-}
-
-.image--bw {
-  filter: grayscale(100%);
-  mix-blend-mode: multiply;
 }
 
 .twistyface {

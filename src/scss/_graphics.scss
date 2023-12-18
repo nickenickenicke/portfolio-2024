@@ -1,5 +1,14 @@
 @use "./variables" as v;
 
+img {
+  width: 100%;
+}
+
+.image--bw {
+  filter: grayscale(100%);
+  mix-blend-mode: multiply;
+}
+
 .star {
   display: inline-block;
   aspect-ratio: 1/1;
