@@ -107,6 +107,12 @@
   }
 }
 
+.gc__tablet--36 {
+  @include m.for-size(tablet) {
+    grid-column: content-3 / content-5;
+  }
+}
+
 .gc__tablet--3end {
   @include m.for-size(tablet) {
     grid-column: content-3 / content-end;
@@ -128,6 +134,12 @@
 }
 
 .gc__desktop--35 {
+  @include m.for-size(desktop) {
+    grid-column: content-3 / content-5;
+  }
+}
+
+.gc__desktop--36 {
   @include m.for-size(desktop) {
     grid-column: content-3 / content-5;
   }
