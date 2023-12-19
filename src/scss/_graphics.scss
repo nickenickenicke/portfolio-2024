@@ -68,7 +68,7 @@ img {
   align-items: flex-start;
   justify-content: flex-start;
   gap: v.$margin-s;
-  margin-bottom: v.$margin-m;
+  margin: 0 v.$margin-m v.$margin-m;
   &__icon {
     height: 30px;
     img {
