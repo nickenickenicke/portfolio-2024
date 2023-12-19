@@ -67,10 +67,20 @@ img {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  flex-wrap: wrap;
   gap: v.$margin-s;
   margin: 0 v.$margin-m v.$margin-m;
+  padding-right: v.$margin-l;
   &__icon {
     height: 30px;
+    &--desktop {
+      height: 30px;
+      aspect-ratio: 18/16;
+    }
+    &--mobile {
+      height: 30px;
+      aspect-ratio: 12/16;
+    }
     img {
       width: unset;
       height: 100%;
