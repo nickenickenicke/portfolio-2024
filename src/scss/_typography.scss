@@ -8,6 +8,7 @@
 }
 
 .header {
+  position: relative;
   font-size: v.$font-xxl;
   text-transform: uppercase;
   font-family: v.$font-sans;
@@ -19,6 +20,17 @@
     font-size: v.$font-xxl-tablet;
     @include m.for-size(desktop) {
       font-size: v.$font-xxl-desktop;
+    }
+  }
+  &__star {
+    height: calc(110px * (3.5 / 6));
+    vertical-align: bottom;
+    @include m.for-size(tablet) {
+      height: calc(110px * (4 / 6));
+      @include m.for-size(desktop) {
+        //I fit the star to the desktop text and used the font size to calc the other ones
+        height: 110px;
+      }
     }
   }
   &--m {

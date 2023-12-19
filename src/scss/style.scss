@@ -40,17 +40,6 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  &__star {
-    height: calc(110px * (3.5 / 6));
-    vertical-align: bottom;
-    @include m.for-size(tablet) {
-      height: calc(110px * (4 / 6));
-      @include m.for-size(desktop) {
-        //I fit the star to the desktop text and used the font size to calc the other ones
-        height: 110px;
-      }
-    }
-  }
 }
 
 .twistyface {

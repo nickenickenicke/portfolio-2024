@@ -59,6 +59,12 @@
   }
 }
 
+.gc__tablet--start1 {
+  @include m.for-size(tablet) {
+    grid-column: content-start / content-1;
+  }
+}
+
 .gc__tablet--start2 {
   @include m.for-size(tablet) {
     grid-column: content-start / content-2;
@@ -86,6 +92,12 @@
 .gc__tablet--15 {
   @include m.for-size(tablet) {
     grid-column: content-1 / content-5;
+  }
+}
+
+.gc__tablet--1end {
+  @include m.for-size(tablet) {
+    grid-column: content-1 / content-end;
   }
 }
 
