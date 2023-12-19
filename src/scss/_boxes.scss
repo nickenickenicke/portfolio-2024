@@ -11,9 +11,27 @@
   &--top {
     width: 100%;
     padding: v.$margin-xs 0 v.$margin-xs;
+    position: relative;
     &__dark {
       background-color: v.$col-black;
       color: v.$col-bg;
+      &-flair {
+        &::after {
+          @supports (clip-path: polygon(62% 0%, 100% 0%, 100% 39%, 62% 39%)) {
+            content: "";
+            width: 100px;
+            height: 40px;
+            position: absolute;
+            top: 5px;
+            right: 7px;
+
+            border: 3px solid v.$col-bg;
+            clip-path: polygon(62% 0%, 100% 0%, 100% 39%, 62% 39%);
+
+            border-radius: 999em;
+          }
+        }
+      }
       &::selection {
         color: v.$col-black;
         background-color: v.$col-bg;
