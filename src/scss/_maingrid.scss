@@ -21,6 +21,12 @@
   grid-row: span 2;
 }
 
+.gr__tablet--1 {
+  @include m.for-size(tablet) {
+    grid-row: span 1;
+  }
+}
+
 /* GRID COLUMNS */
 
 .gc--full {
@@ -65,9 +71,21 @@
   }
 }
 
+.gc__tablet--start5 {
+  @include m.for-size(tablet) {
+    grid-column: content-start / content-4;
+  }
+}
+
 .gc__tablet--15 {
   @include m.for-size(tablet) {
     grid-column: content-1 / content-5;
+  }
+}
+
+.gc__tablet--35 {
+  @include m.for-size(tablet) {
+    grid-column: content-3 / content-5;
   }
 }
 
@@ -91,6 +109,12 @@
   }
 }
 
+.gc__desktop--35 {
+  @include m.for-size(desktop) {
+    grid-column: content-3 / content-5;
+  }
+}
+
 .gc__desktop--3end {
   @include m.for-size(desktop) {
     grid-column: content-3 / content-end;
@@ -101,4 +125,10 @@
   @include m.for-size(desktop) {
     grid-column: content-4 / content-end;
   }
+}
+
+.subgrid {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
 }
