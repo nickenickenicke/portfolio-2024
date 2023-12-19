@@ -87,6 +87,16 @@
   }
 }
 
+.link-btn {
+  @extend .btn;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  &--inverted {
+    @extend .btn--inverted;
+  }
+}
+
 .modal--btn {
   border: none;
   background-color: v.$col-frame;
