@@ -23,12 +23,48 @@
     "sv"
     "en";
   grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 2fr;
   @include m.for-size(tablet) {
     width: 80%;
     height: 80%;
     grid-template-areas:
       "header header"
       "sv en";
-    grid-template-columns: repeat(1fr 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
   }
+}
+
+.modal--btn {
+  position: relative;
+  //Main styling is in _buttons.scss
+  &:nth-of-type(1) {
+    grid-area: sv;
+  }
+  &:nth-of-type(2) {
+    grid-area: en;
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: black;
+      top: -1px;
+      left: 30%;
+      height: 2px;
+      width: 40%;
+      @include m.for-size(tablet) {
+        width: 2px;
+        height: 40%;
+        top: 30%;
+        left: -1px;
+      }
+    }
+  }
+}
+
+.modal--header {
+  grid-area: header;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }

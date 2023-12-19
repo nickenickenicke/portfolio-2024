@@ -86,3 +86,14 @@
     }
   }
 }
+
+.modal--btn {
+  border: none;
+  background-color: v.$col-frame;
+  cursor: pointer;
+  font-size: v.$font-xxl-desktop;
+  &:hover {
+    color: v.$col-frame;
+    background-color: v.$col-black;
+  }
+}
