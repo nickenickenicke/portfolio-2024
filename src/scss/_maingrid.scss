@@ -27,6 +27,18 @@
   grid-row: span 2;
 }
 
+.gr--3 {
+  grid-row: span 3;
+}
+
+.gr--4 {
+  grid-row: span 4;
+}
+
+.gr--5 {
+  grid-row: span 5;
+}
+
 .gr__tablet--1 {
   @include m.for-size(tablet) {
     grid-row: span 1;
