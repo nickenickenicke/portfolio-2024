@@ -1,4 +1,5 @@
 @use "./variables" as v;
+@use "./mixins" as m;
 
 img {
   width: 100%;
@@ -57,5 +58,22 @@ img {
   text-transform: uppercase;
   &--thick {
     border: v.$border-m;
+  }
+}
+
+.iconlist {
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: v.$margin-s;
+  margin-bottom: v.$margin-m;
+  &__icon {
+    height: 30px;
+    img {
+      width: unset;
+      height: 100%;
+    }
   }
 }
