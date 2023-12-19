@@ -8,7 +8,10 @@
     [content-1] 1fr [content-2] 1fr [content-3] 1fr [content-4] 1fr
     [content-5] 1fr [content-end gutter-r-start] v.$frame-size [gutter-r-end];
   grid-template-rows: repeat(1, auto);
-  gap: v.$margin-m;
+  gap: v.$margin-xs;
+  @include m.for-size(tablet) {
+    gap: v.$margin-m;
+  }
 }
 
 .subgrid {
