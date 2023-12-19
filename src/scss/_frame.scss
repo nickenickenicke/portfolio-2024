@@ -41,7 +41,7 @@
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     background-color: none;
-    border: 1px solid black;
+    border: v.$border-s;
   }
   &--right {
     grid-column: 3 / 4;

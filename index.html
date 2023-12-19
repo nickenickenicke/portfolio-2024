@@ -6,6 +6,16 @@
     <title></title>
   </head>
   <body>
+    <div id="modal-container" class="display-none">
+      <section id="modal" class="modal">
+        <button id="btn-initial-lang-sv" class="modal--button" type="button">
+          SV
+        </button>
+        <button id="btn-initial-lang-en" class="modal--button" type="button">
+          EN
+        </button>
+      </section>
+    </div>
     <div id="frame">
       <div class="frame frame--top">En nykläckt</div>
       <div class="frame frame--left">Unna dig</div>
@@ -99,6 +109,9 @@
       <div class="gc--full gc__desktop--start3 gr--1">
         <button class="btn w100p mb">Regular ol' button</button>
         <button class="btn btn--inverted w100p mb">Inverted button</button>
+        <button id="modaltoggle-btn" class="btn w100p mb">
+          Toggle the modal
+        </button>
         <h2 class="header">H2 with class header</h2>
         <h2 class="header header--outline">
           H2 with class header and header--outline
