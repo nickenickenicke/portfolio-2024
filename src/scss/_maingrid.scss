@@ -63,6 +63,13 @@
   grid-column: content-4 / content-end;
 }
 
+.gc-hidden {
+  display: none;
+  @include m.for-size(tablet) {
+    display: unset;
+  }
+}
+
 /* GRID COLUMNS TABLET */
 
 .gc__tablet--full {
@@ -110,6 +117,12 @@
 .gc__tablet--1end {
   @include m.for-size(tablet) {
     grid-column: content-1 / content-end;
+  }
+}
+
+.gc__tablet--2end {
+  @include m.for-size(tablet) {
+    grid-column: content-2 / content-end;
   }
 }
 
