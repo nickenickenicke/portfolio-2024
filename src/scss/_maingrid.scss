@@ -104,7 +104,7 @@
 
 .gc__tablet--start5 {
   @include m.for-size(tablet) {
-    grid-column: content-start / content-4;
+    grid-column: content-start / content-5;
   }
 }
 
@@ -132,12 +132,6 @@
   }
 }
 
-.gc__tablet--36 {
-  @include m.for-size(tablet) {
-    grid-column: content-3 / content-5;
-  }
-}
-
 .gc__tablet--3end {
   @include m.for-size(tablet) {
     grid-column: content-3 / content-end;
@@ -150,6 +144,12 @@
   }
 }
 
+.gc__tablet--5end {
+  @include m.for-size(tablet) {
+    grid-column: content-5 / content-end;
+  }
+}
+
 /* GRID COLUMNS DESKTOP */
 
 .gc__desktop--start3 {
@@ -159,12 +159,6 @@
 }
 
 .gc__desktop--35 {
-  @include m.for-size(desktop) {
-    grid-column: content-3 / content-5;
-  }
-}
-
-.gc__desktop--36 {
   @include m.for-size(desktop) {
     grid-column: content-3 / content-5;
   }

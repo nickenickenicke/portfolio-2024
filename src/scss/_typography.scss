@@ -51,6 +51,9 @@
       -webkit-text-stroke: 1px v.$col-black;
     }
   }
+  &--alignright {
+    text-align: right;
+  }
 }
 
 .modal--header {
