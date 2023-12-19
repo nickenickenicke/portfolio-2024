@@ -11,6 +11,12 @@
   gap: v.$margin-m;
 }
 
+.subgrid {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+}
+
 /* GRID ROWS */
 
 .gr--1 {
@@ -125,10 +131,4 @@
   @include m.for-size(desktop) {
     grid-column: content-4 / content-end;
   }
-}
-
-.subgrid {
-  display: grid;
-  grid-template-columns: subgrid;
-  grid-template-rows: subgrid;
 }
