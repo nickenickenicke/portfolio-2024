@@ -11,7 +11,10 @@ let spanEn: HTMLSpanElement[] = [];
 
 spanElements.forEach((element) => {
   if (element.lang === "sv") spanSv.push(element);
-  if (element.lang === "en") spanEn.push(element);
+  if (element.lang === "en") {
+    spanEn.push(element);
+    element.classList.add("display-none");
+  }
 });
 
 /* BUTTON TO SWITCH LANGUAGES */
@@ -72,8 +75,18 @@ const saveLanguageToLs = () => {
   localStorage.setItem("IsSelectedLanguageSv", JSON.stringify(isLangSv));
 };
 
-/* CHECK LOCAL STORAGE AND CHOOSE CORRECT LANGUAGE / TOGGLE MODAL */
-if (localStorage.getItem("IsSelectedLanguageSv"))
+/*  CHECK LOCAL STORAGE,
+    CHOOSE CORRECT LANGUAGE,
+    SET CORRECT INITIAL TEXT FOR LANGUAGE WITCH BUTTON
+    TOGGLE MODAL */
+if (localStorage.getItem("IsSelectedLanguageSv")) {
   isLangSv = JSON.parse(localStorage.getItem("IsSelectedLanguageSv") || "true");
-if (!isLangSv) switchLanguages();
+}
+if (isLangSv) {
+  (btnLanguage as HTMLButtonElement).innerText = "English";
+}
+if (!isLangSv) {
+  switchLanguages();
+  (btnLanguage as HTMLButtonElement).innerText = "Svenska";
+}
 if (!localStorage.getItem("IsSelectedLanguageSv")) toggleModal();
