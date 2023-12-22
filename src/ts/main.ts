@@ -1,19 +1,5 @@
 import "./../scss/style.scss";
 
-/* MODAL THINGS */
-const modalContainer = document.getElementById("modal-container");
-
-document.getElementById("modaltoggle-btn")?.addEventListener("click", () => {
-  toggleModal();
-});
-
-modalContainer?.addEventListener("click", (e) => {
-  //Close modal by clicking outside of it
-  if (e.target == modalContainer) {
-    toggleModal();
-  }
-});
-
 /* FIND ALL SPANS AND CHECK FOR lang ATTRIBUTE */
 let spanElements: HTMLSpanElement[] = Array.from(
   document.getElementsByTagName("span")
@@ -38,7 +24,20 @@ btnLanguage?.addEventListener("click", () => {
   saveLanguageToLs();
 });
 
-/* PREPARE FOR LANGUAGE SELECT */
+/* LANGUAGE SELECT MODAL */
+const modalContainer = document.getElementById("modal-container");
+
+document.getElementById("modaltoggle-btn")?.addEventListener("click", () => {
+  toggleModal();
+});
+
+modalContainer?.addEventListener("click", (e) => {
+  //Close modal by clicking outside of it
+  if (e.target == modalContainer) {
+    toggleModal();
+  }
+});
+
 const btnInitalLangSv = document.getElementById("btn-initial-lang-sv");
 const btnInitalLangEn = document.getElementById("btn-initial-lang-en");
 btnInitalLangSv?.addEventListener("click", () => {
@@ -74,3 +73,9 @@ const switchLanguages = () => {
 const saveLanguageToLs = () => {
   localStorage.setItem("IsSelectedLanguageSv", JSON.stringify(isLangSv));
 };
+
+/* CHECK LOCAL STORAGE AND CHOOSE CORRECT LANGUAGE / TOGGLE MODAL */
+if (localStorage.getItem("IsSelectedLanguageSv"))
+  isLangSv = JSON.parse(localStorage.getItem("IsSelectedLanguageSv") || "true");
+if (!isLangSv) switchLanguages();
+if (!localStorage.getItem("IsSelectedLanguageSv")) toggleModal();
