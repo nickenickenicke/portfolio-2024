@@ -1,7 +1,7 @@
 @use "./variables" as v;
 @use "./mixins" as m;
 
-.maingrid {
+.grid--main {
   display: grid;
   grid-template-columns:
     [gutter-l-start] v.$frame-size [gutter-l-end content-start] 1fr
@@ -12,6 +12,11 @@
   @include m.for-size(tablet) {
     gap: v.$margin-m;
   }
+}
+
+.grid--footer {
+  @extend .grid--main;
+  gap: 0;
 }
 
 .subgrid {
@@ -49,6 +54,10 @@
 }
 
 /* GRID COLUMNS */
+
+.gc--max {
+  grid-column: gutter-l-start / gutter-r-end;
+}
 
 .gc--full {
   grid-column: content-start / content-end;

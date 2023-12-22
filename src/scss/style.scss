@@ -60,3 +60,14 @@ a {
     background-color: v.$col-black;
   }
 }
+
+.footer-fade {
+  height: 132px;
+  background-color: v.$col-bg;
+  background: url(./img/footer_fade.png);
+}
+
+.footer {
+  background-color: v.$col-black;
+  min-height: 40vh;
+}
