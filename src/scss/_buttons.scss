@@ -107,3 +107,10 @@
     background-color: v.$col-black;
   }
 }
+
+#language-btn {
+  z-index: 10;
+  position: fixed;
+  bottom: v.$margin-l;
+  right: v.$margin-l;
+}
