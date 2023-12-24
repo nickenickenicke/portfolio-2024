@@ -16,7 +16,7 @@
 
 .grid--footer {
   @extend .grid--main;
-  gap: 0;
+  row-gap: 0;
 }
 
 .subgrid {

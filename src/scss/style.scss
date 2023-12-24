@@ -69,5 +69,12 @@ a {
 
 .footer {
   background-color: v.$col-black;
-  min-height: 40vh;
+  &::selection {
+    color: v.$col-black;
+    background-color: v.$col-bg;
+  }
+}
+
+.h20vh {
+  height: 20vh;
 }

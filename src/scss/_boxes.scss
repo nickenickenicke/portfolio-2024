@@ -42,9 +42,9 @@
     width: 100%;
     padding: v.$margin-xs 0 v.$margin-m;
   }
-  &--header {
-    @extend .header;
-    @extend .header--s;
+  &--heading {
+    @extend .heading;
+    @extend .heading--s;
   }
   &--border {
     border: v.$border-m;
