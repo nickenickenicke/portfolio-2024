@@ -17,6 +17,9 @@
 .grid--footer {
   @extend .grid--main;
   row-gap: 0;
+  .subgrid {
+    row-gap: v.$margin-m;
+  }
 }
 
 .subgrid {

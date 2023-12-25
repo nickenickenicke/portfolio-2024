@@ -15,7 +15,7 @@
     &__dark {
       background-color: v.$col-black;
       color: v.$col-bg;
-      &-flair {
+      &--flair {
         &::after {
           @supports (clip-path: polygon(62% 0%, 100% 0%, 100% 39%, 62% 39%)) {
             content: "";

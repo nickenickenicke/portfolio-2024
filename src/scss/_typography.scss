@@ -1,10 +1,11 @@
 @use "./variables" as v;
 @use "./mixins" as m;
 
-.bodytext {
+.text--body {
   font-family: v.$font-sans;
   font-size: v.$font-m;
   line-height: 1.4;
+  color: v.$col-black;
 }
 
 .heading {
