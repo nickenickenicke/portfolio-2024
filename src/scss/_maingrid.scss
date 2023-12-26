@@ -2,6 +2,7 @@
 @use "./mixins" as m;
 
 .grid--main {
+  background-color: v.$col-bg;
   display: grid;
   grid-template-columns:
     [gutter-l-start] v.$frame-size [gutter-l-end content-start] 1fr
