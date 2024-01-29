@@ -87,3 +87,18 @@ img {
     }
   }
 }
+
+.iconsvg_bg {
+  fill: v.$col-black;
+  fill-rule: evenodd;
+  stroke-width: 0px;
+}
+.iconsvg_fill {
+  fill: v.$col-bg;
+  fill-rule: evenodd;
+  stroke-width: 0px;
+}
+
+.footer__icon {
+  height: 30px;
+}
