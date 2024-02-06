@@ -10,8 +10,11 @@
   z-index: 20;
   display: grid;
   grid-template-columns: v.$frame-size 1fr v.$frame-size;
-  grid-template-rows: v.$frame-size 1fr v.$frame-size;
+  grid-template-rows: v.$frame-size 1fr calc(v.$frame-size * 2);
   pointer-events: none;
+  @include m.for-size(tablet) {
+    grid-template-rows: v.$frame-size 1fr v.$frame-size;
+  }
 }
 
 .frame {
