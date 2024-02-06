@@ -79,7 +79,7 @@
   grid-column: content-4 / content-end;
 }
 
-.gc-hidden {
+.gc--hidden {
   display: none;
   @include m.for-size(tablet) {
     display: unset;
