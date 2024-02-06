@@ -90,6 +90,25 @@ a {
       background-color: v.$col-bg;
     }
   }
+  &__list {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: v.$margin-s;
+    &-item {
+      @extend .footer__text;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: v.$col-bg;
+    display: flex;
+    gap: v.$margin-xs;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .h20vh {
