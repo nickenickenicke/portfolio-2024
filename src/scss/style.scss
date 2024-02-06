@@ -38,7 +38,7 @@ main {
 /* INTRO SECTION */
 
 .intro {
-  min-height: calc(100vh - v.$margin-m - (v.$frame-size * 2));
+  min-height: calc(100dvh - v.$margin-m - (v.$frame-size * 2));
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -111,6 +111,6 @@ a {
   }
 }
 
-.h20vh {
-  height: 20vh;
+.h20dvh {
+  height: 20dvh;
 }
