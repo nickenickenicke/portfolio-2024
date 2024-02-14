@@ -136,6 +136,12 @@
   }
 }
 
+.gc__tablet--23 {
+  @include m.for-size(tablet) {
+    grid-column: content-2 / content-3;
+  }
+}
+
 .gc__tablet--2end {
   @include m.for-size(tablet) {
     grid-column: content-2 / content-end;
@@ -171,6 +177,18 @@
 .gc__desktop--start3 {
   @include m.for-size(desktop) {
     grid-column: content-start / content-3;
+  }
+}
+
+.gc__desktop--start2 {
+  @include m.for-size(desktop) {
+    grid-column: content-start / content-2;
+  }
+}
+
+.gc__desktop--24 {
+  @include m.for-size(desktop) {
+    grid-column: content-2 / content-4;
   }
 }
 
