@@ -42,6 +42,10 @@
     width: 100%;
     padding: v.$margin-xs 0 v.$margin-m;
   }
+  &--mid {
+    width: 100%;
+    padding: v.$margin-xs 0 0;
+  }
   &--heading {
     @extend .heading;
     @extend .heading--s;
@@ -50,6 +54,9 @@
     border: v.$border-m;
     .box--bottom {
       padding: v.$margin-xs v.$margin-m v.$margin-m;
+    }
+    .box--mid {
+      padding: v.$margin-xs v.$margin-m 0;
     }
     .box--top {
       padding: v.$margin-xs v.$margin-m;
